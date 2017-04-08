@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+	<!--link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"-->
+	<link rel="stylesheet" type="text/css" href="assets/dist/css/main.css">
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-class="{'styl--background' : tab==1, 'hypertext--background' : tab==2}" ng-controller="MainController">
+	<nav class="files-bar">
+		<div ng-click="tab=1" ng-class="{'active' : tab==1}" class="files-bar__tab">about.styl</div>
+		<div ng-click="tab=2" ng-class="{'active' : tab==2}" class="files-bar__tab">skills.html</div>
+		<div ng-click="tab=3" ng-class="{'active' : tab==3}" class="files-bar__tab">README.md</div>
+		<div class="fix"></div>
+	</nav>
+	<div ng-show="tab == 1" ng-class="{'active' : tab==1}" class="viewport styl">
+		<div class="code">
+			<div class="mark number">
+				<div ng-repeat="n in [] | range:50">
+					{{n}}<br/>
+				</div>
+			</div>
+			<section>
+				<div class="comment">//go to README.md to understand my portfolio</div>
+				<span class="property-selector">kiss</span>(<span class="var">kiss</span><span class="operator">=false</span>)
+				<div class="tab">
+					<span class="property-set">animation-duration</span> <span class="value-number">0.6</span><span class="condition">s</span><br/>
+				  	<span class="condition">if</span> <span class="var">kiss</span><span class="operator">=</span><span class="value-string">'long'</span>
+					<div class="tab">
+						<span class="property-set">animation-duration</span> <span class="value-number">120</span><span class="condition">s</span><br/>
+						<span class="property-set">animation-iteration-count</span> <span class="var">infinite</span><br/>
+						<span class="property-set">animation-direction</span> <span class="var">alternate</span>
+					</div>
+				</div>
+				<br/>
+				<span class="property-selector">married</span>(<span class="var">wife</span>)
+				<div class="tab">
+					<span class="property-set">love</span> <span class="var">wife</span><br/>
+					<span class="property-set">videogame</span> <span class="value-string">2</span> <span class="var">players</span><br/>
+					<span class="property-selector">kiss</span>(<span class="value-string">'long'</span>)
+				</div>
+				<br/>
+				<span class="property-selector">.allanless</span>,<br/>
+				<span class="tag">person</span>[<span class="property-selector">name</span><span class="operator">=</span><span class="value-string">"Allan Ferreira"</span>]
+				<div class="tab">
+					<span class="property-set">style</span> hippie<br/>
+					<span class="property-set">front</span> <span class="var">$good</span><br/>
+					<span class="property-set">humor</span> <span class="var">$funny</span><br/>
+					<span class="property-set">status</span> married(<span class="value-string">'marianna'</span>)<br/>
+					<span class="var">&</span><span class="property-selector">:first-child</span>
+					<div class="tab">
+						<span class="comment">//really dude?</span>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div ng-show="tab == 2" ng-class="{'active' : tab==2}" class="viewport hypertext">
+		<div class="code">
+			<div class="mark number">
+				<div ng-repeat="n in [] | range:50">
+					{{n}}
+					<br/>
+				</div>
+			</div>
+			<section>
+				<div class="comment">&lt;!--go to README.md to understand my portfolio--&gt;</div>
+				&lt;<span class="tag">content </span><span class="property">class</span>=<span class="value">"skills"</span>&gt;
+				<div class="tab" ng-repeat="content in contents">
+					
+					&lt;<span class="tag">item </span><span class="property">title</span>=<span class="value">"{{content.title}}"</span>&gt;
+					
+					<div class="tab">
+						<span ng-repeat="item in content.items">
+						{{item}}<span ng-if="!$last">, </span>
+						</span>
+					</div>
+					
+					&lt;/<span class="tag">item</span>&gt;
+					
+				</div>
+				<div class="tab">
+					&lt;<span class="tag">item </span><span class="property">ng-repeat</span>=<span class="value">"new in moreTechnologies"</span>&gt;
+					
+					<div class="tab" ng-repeat="test in tests">
+						<span>
+							{{test.name}}
+						</span>
+					</div>
+					
+					&lt;/<span class="tag">item</span>&gt;<span class="comment">&lt;!--loop this guy--&gt;</span>
+				</div>
+				&lt;/<span class="tag">content</span>&gt;
+			</section>
+		</div>
+	</div>
+	<div ng-show="tab == 3" ng-class="{'active' : tab==3}" class="viewport readme">
+		<div class="code">
+			<div class="mark number">
+				<div ng-repeat="n in [] | range:50">
+					{{n}}
+					<br/>
+				</div>
+			</div>
+			<section>
+				#presentation<br/><br/>
+				Hello handsome!<br/>
+				Welcome to my extraordinary fucking portfolio.<br/>
+				Now you should be asking "Who is this awesome guy?"<br/>
+				Excellent question, pretty face.<br/>
+				My name is Allan and I'm a developer from Brazil.<br/><br/>
+
+				Here are my work experiences:<br/>
+				-------------------------------------
+				<br/>
+
+				Front-End Developer Jr<br/>
+				madeinweb - 2016<br/><br/>
+
+				Team leader/PHP Developer<br/>
+				Plus - 2015<br/><br/>
+
+				PHP Developer Jr<br/>
+				DCC - 2012/2015<br/>
+				-------------------------------------
+				<br/>
+				Read the html tab to know about my skills<br/>or read styl tab for more details about myself.<br/><br/>
+
+				If you prefer to see my full curriculum and projects please go to <br/><a target="_blank" href="http://mechamoallan.com.br/portfolio">http://mechamoallan.com.br/portfolio</a> or <a target="_blank" href="http://mechamoallan.com.br/curriculo">http://mechamoallan.com.br/curriculo</a>
+				<br/><br/>
+				Get in touch<br/>
+				allan.less@outlook.com<br/>
+				+55 11 94567 2742 / +55 11 2679-3956
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/controller/controller.js"></script>
+</body>
+</html>

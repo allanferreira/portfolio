@@ -1,0 +1,109 @@
+.fix
+	clear both
+.files-bar
+	position fixed
+	width 100%
+	top 0
+	left 0
+	z-index 10
+	background #262b30
+	border-bottom 3px solid #101112
+	&__tab
+		color #65787b
+		background #1e2326
+		box-shadow #101112
+		float left
+		padding 13px 11px
+		cursor pointer
+		&:hover
+			color #ffffff
+	&__tab.active
+		color #cbccc2
+		background #101112
+		box-shadow 0 3px 0 #4f99d3
+		&:hover
+			color #ffffff
+.viewport.active
+	display block
+.viewport
+	display none
+	position absolute
+	width  100%
+	top 45px
+	left 0
+	padding-left 15px
+	padding-top  15px
+	margin-bottom 30px
+.code
+	overflow-y scroll
+	position relative
+	overflow hidden
+	padding-left 30px
+.mark
+	position absolute
+	left     0
+	top      0
+.tab
+	padding-left 30px
+.hypertext
+	background $html-background
+	color      $html-text
+	&--background
+		background $html-background
+	.tab
+		border-left  1px dotted $html-dotted
+	::selection
+		background $html-selection
+	::-moz-selection
+		background $html-selection
+	.tag
+		color $html-tag
+	.property
+		color $html-property
+	.value
+		color $html-value
+	.comment
+		color $html-comment
+	.background
+		color $html-background
+	.dotted
+		color $html-dotted
+	.number
+		color $html-number
+.styl
+	background $styl-background
+	color      $styl-text
+	&--background
+		background $styl-background
+	.tab
+		border-left  1px dotted $styl-dotted
+	::selection
+		background $styl-selection
+	::-moz-selection
+		background $styl-selection
+	.tag
+		color $styl-tag
+	.class
+		color $styl-class
+	.id
+		color $styl-id
+	.property-selector
+		color $styl-property-selector
+	.property-set
+		color $styl-property-set
+	.value-string
+		color $styl-value-string
+	.value-number
+		color $styl-value-number
+	.var
+		color $styl-var
+	.operator
+		color $styl-operator
+	.condition
+		color $styl-condition
+	.dotted
+		color $styl-dotted
+	.number
+		color $styl-number
+	.comment
+		color $styl-comment

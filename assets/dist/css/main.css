@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  font: normal 300 14px Courier New, serif;
+}
+.fix {
+  clear: both;
+}
+.files-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #262b30;
+  border-bottom: 3px solid #101112;
+}
+.files-bar__tab {
+  color: #65787b;
+  background: #1e2326;
+  box-shadow: #101112;
+  float: left;
+  padding: 13px 11px;
+  cursor: pointer;
+}
+.files-bar__tab:hover {
+  color: #fff;
+}
+.files-bar__tab.active {
+  color: #cbccc2;
+  background: #101112;
+  box-shadow: 0 3px 0 #4f99d3;
+}
+.files-bar__tab.active:hover {
+  color: #fff;
+}
+.viewport.active {
+  display: block;
+}
+.viewport {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+  padding-left: 15px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+.code {
+  overflow-y: scroll;
+  position: relative;
+  overflow: hidden;
+  padding-left: 30px;
+}
+.mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tab {
+  padding-left: 30px;
+}
+.hypertext {
+  background: #000;
+  color: #c8c6bc;
+}
+.hypertext--background {
+  background: #000;
+}
+.hypertext .tab {
+  border-left: 1px dotted #201e1c;
+}
+.hypertext ::selection {
+  background: #218a26;
+}
+.hypertext ::-moz-selection {
+  background: #218a26;
+}
+.hypertext .tag {
+  color: #f92672;
+}
+.hypertext .property {
+  color: #a6e22c;
+}
+.hypertext .value {
+  color: #e6db70;
+}
+.hypertext .comment {
+  color: #c28639;
+}
+.hypertext .background {
+  color: #000;
+}
+.hypertext .dotted {
+  color: #201e1c;
+}
+.hypertext .number {
+  color: #6b655a;
+}
+.styl {
+  background: #103349;
+  color: #f8f8e3;
+}
+.styl--background {
+  background: #103349;
+}
+.styl .tab {
+  border-left: 1px dotted #325062;
+}
+.styl ::selection {
+  background: #ff483e;
+}
+.styl ::-moz-selection {
+  background: #ff483e;
+}
+.styl .tag {
+  color: #ac5c92;
+}
+.styl .class {
+  color: #ddc600;
+}
+.styl .id {
+  color: #ddc600;
+}
+.styl .property-selector {
+  color: #ddc600;
+}
+.styl .property-set {
+  color: #d5b7ff;
+}
+.styl .value-string {
+  color: #da2063;
+}
+.styl .value-number {
+  color: #ff196a;
+}
+.styl .var {
+  color: #0e8eeb;
+}
+.styl .operator {
+  color: #f9ff43;
+}
+.styl .condition {
+  color: #f9ff43;
+}
+.styl .dotted {
+  color: #325062;
+}
+.styl .number {
+  color: #84959d;
+}
+.styl .comment {
+  color: #0e615e;
+}
